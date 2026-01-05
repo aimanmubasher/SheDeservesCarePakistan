@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import logo from '/src/logo.png';
+import natasha from '/src/natasha.jpg';
+import aiman from '/src/aiman.jpg';
+import { MessageCircle } from "lucide-react";
+
 import { 
   Heart, 
   ShieldCheck, 
@@ -193,9 +198,13 @@ export default function App() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass py-4 border-b border-gray-100 shadow-sm' : 'py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-brand-purple rounded-xl flex items-center justify-center shadow-lg transform rotate-3">
-              <Heart className="text-white w-6 h-6 fill-current" />
-            </div>
+          <div className="w-10 h-10 flex items-center justify-center">
+          <img
+            src={logo}
+            alt="She Deserves Care Logo"
+            className="w-full h-full object-contain"
+          />
+        </div>
             <span className="text-xl font-extrabold text-brand-dark tracking-tight">She Deserves Care</span>
           </div>
           
@@ -223,7 +232,8 @@ export default function App() {
                 <Badge className="border-brand-purple text-brand-purple">Introducing She Deserves Care Pakistan</Badge>
                 <h1 className="text-6xl md:text-8xl font-extrabold text-brand-dark leading-[1.1] tracking-tight">
                   Empowering <br />
-                  <span className="text-brand-purple">Her Journey.</span>
+                  <span className="text-brand-purple block">Her</span>
+                  <span className="text-brand-purple block">Journey</span>
                 </h1>
                 <p className="text-xl text-gray-600 font-medium max-w-lg leading-relaxed">
                   A bilingual digital health platform designed for Pakistani women managing Endometriosis, PCOS, and reproductive health challenges.
@@ -231,11 +241,6 @@ export default function App() {
                 <div className="border-l-4 border-brand-purple pl-6 py-2 bg-brand-soft/20 rounded-r-xl">
                   <p className="urdu-text text-2xl text-brand-dark font-bold">خواتین کی صحت، ہماری ترجیح</p>
                 </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-6">
-                <AppStoreBadge />
-                <PlayStoreBadge />
               </div>
               
               <div className="flex items-center gap-8 pt-6">
@@ -252,7 +257,7 @@ export default function App() {
             <div className="relative animate-in fade-in zoom-in duration-1000 delay-200">
               <div className="relative z-10 w-full aspect-square max-w-lg mx-auto bg-brand-soft rounded-[3rem] overflow-hidden shadow-2xl group border-4 border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800" 
+                  src={logo} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105"
                   alt="Care & Dignity"
                 />
@@ -399,7 +404,7 @@ export default function App() {
           
           <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
             <div className="p-12 rounded-[3rem] bg-gray-50 border border-gray-100 flex flex-col items-center text-center group hover:bg-white hover:shadow-xl transition-all">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" className="w-48 h-48 rounded-full mb-10 border-8 border-white shadow-xl grayscale group-hover:grayscale-0 transition-all duration-500" alt="Natasha Mehmood" />
+              <img src={natasha} className="w-48 h-48 rounded-full mb-10 border-8 border-white shadow-xl grayscale group-hover:grayscale-0 transition-all duration-500" alt="Natasha Mehmood" />
               <div className="space-y-4">
                 <h4 className="text-3xl font-extrabold text-brand-dark">Natasha Mehmood</h4>
                 <Badge className="border-brand-purple text-brand-purple bg-brand-soft/30">Founder</Badge>
@@ -410,12 +415,12 @@ export default function App() {
             </div>
             
             <div className="p-12 rounded-[3rem] bg-gray-50 border border-gray-100 flex flex-col items-center text-center group hover:bg-white hover:shadow-xl transition-all">
-              <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?auto=format&fit=crop&q=80&w=400" className="w-48 h-48 rounded-full mb-10 border-8 border-white shadow-xl grayscale group-hover:grayscale-0 transition-all duration-500" alt="Aiman Mubasher" />
+              <img src={aiman} className="w-48 h-48 rounded-full mb-10 border-8 border-white shadow-xl grayscale group-hover:grayscale-0 transition-all duration-500" alt="Aiman Mubasher" />
               <div className="space-y-4">
                 <h4 className="text-3xl font-extrabold text-brand-dark">Aiman Mubasher</h4>
-                <Badge className="border-brand-purple text-brand-purple bg-brand-soft/30">Core Team</Badge>
+                <Badge className="border-brand-purple text-brand-purple bg-brand-soft/30">Co-Founder</Badge>
                 <p className="text-sm text-gray-600 leading-relaxed font-medium">
-                  Aiman brings a deep passion for digital health accessibility and community engagement. She ensures that the platform remains grounded in the cultural realities of Pakistani women while maintaining global standards of data privacy and medical accuracy.
+                  Aiman Mubasher is the Co-Founder of She Deserves Care Pakistan and leads the initiative’s research, design and technology development. She is responsible for translating complex health needs into thoughtful digital solutions that are accessible and user-centred. With a strong focus on digital health accessibility, Aiman works to ensure that the platform reflects the lived realities of women in Pakistan while upholding global standards of medical accuracy, privacy, and ethical technology use. Her work bridges research and practice; transforming evidence, community insight and design into tools that support awareness, dignity and care.
                 </p>
               </div>
             </div>
@@ -510,14 +515,14 @@ export default function App() {
                 </p>
               </div>
               <div className="flex gap-6">
-                <a href="#" className="w-14 h-14 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all shadow-sm">
+                <a href="https://www.instagram.com/shedeservescare_pk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="w-14 h-14 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all shadow-sm">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="w-14 h-14 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all shadow-sm">
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a href="mailto:natasha@shedeservescare.com" className="w-14 h-14 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all shadow-sm">
+                <a href="mailto:conect@shedeservescare.com" className="w-14 h-14 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all shadow-sm">
                   <Mail className="w-6 h-6" />
+                </a>
+                <a href="https://chat.whatsapp.com/CCgMJuGwTyd9pl3x1bSaUj" className="w-14 h-14 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all shadow-sm">
+                  <MessageCircle className="w-6 h-6" />
                 </a>
               </div>
             </div>
@@ -548,9 +553,14 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-20 mb-24">
             <div className="space-y-8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-brand-purple rounded-xl flex items-center justify-center shadow-lg">
-                  <Heart className="text-white w-6 h-6 fill-current" />
-                </div>
+              <div className="w-10 h-10 flex items-center justify-center shadow-lg">
+  <img
+    src={logo}
+    alt="She Deserves Care Logo"
+    className="w-100 h-100 object-contain"
+  />
+</div>
+
                 <span className="text-2xl font-extrabold tracking-tight">She Deserves Care</span>
               </div>
               <p className="text-brand-soft/80 text-sm leading-relaxed font-medium">
