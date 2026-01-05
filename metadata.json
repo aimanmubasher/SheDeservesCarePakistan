@@ -1,0 +1,7 @@
+{
+  "name": "She Deserves Care Pakistan",
+  "description": "A sophisticated, bilingual healthcare platform empowering women managing reproductive health conditions like Endometriosis and PCOS.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
